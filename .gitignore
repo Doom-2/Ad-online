@@ -1,0 +1,6 @@
+.idea/
+__pycache__/
+frontend_react/
+django_static/
+.pytest_cache
+.env

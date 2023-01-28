@@ -1,0 +1,11 @@
+# ignore all
+**
+
+# except
+!ads/**
+!users/**
+!redoc/**
+!skymarket/**
+!entrypoint.sh
+!manage.py
+!requirements.txt
