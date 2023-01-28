@@ -36,6 +36,9 @@ services:
       timeout: 3s
       retries: 5
 
+    ports:
+      - "8000:8000"
+
     volumes:
       - ./django_static:/project/django_static
       - ./django_media:/project/django_media

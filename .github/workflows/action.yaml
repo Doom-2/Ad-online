@@ -31,7 +31,7 @@ jobs:
           command: "ansible-vault decrypt deploy/.env"
       - name: render config
         run: cat docker-compose-ci.yaml | envsubst '$GITHUB_REF_NAME, $GITHUB_RUN_ID' > deploy/docker-compose.yaml
-      - name: copy files to server
+      - name: copy deploy folder to server
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -40,6 +40,14 @@ jobs:
           source: "deploy/*"
           target: "Ads-online"
           strip_components: 1
+      - name: copy django_media folder to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          source: "django_media/*"
+          target: "Ads-online"
       - name: deploy app with collectstastic
         uses: appleboy/ssh-action@master
         with:
