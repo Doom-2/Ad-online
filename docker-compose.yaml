@@ -38,12 +38,13 @@ services:
       db:
         condition: service_healthy
     healthcheck:
-      test: curl -s$ http://127.0.0.1:8000/ping/ || exit 1
+      test: curl -s$ http://localhost:8000/ping/ || exit 1
       interval: 3s
       timeout: 3s
       retries: 5
 
     volumes:
+      - ./users:/project/users
       - ./django_static:/project/django_static
       - ./django_media:/project/django_media
 
