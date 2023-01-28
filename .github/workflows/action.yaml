@@ -49,6 +49,6 @@ jobs:
           script: |
             cd Ads-online
             docker compose up -d
-            docker exec tick-tick-api-1 \
+            docker exec ads-online-api-1 \
             /bin/bash -c "python3 manage.py collectstatic --noinput"
             docker system prune -a -f
