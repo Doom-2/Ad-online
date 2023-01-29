@@ -188,3 +188,6 @@ EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = os.environ.get("EMAIL_PORT")
 SERVER_EMAIL = os.environ.get("EMAIL_HOST_USER")
 DEFAULT_FROM_EMAIL = os.environ.get("EMAIL_HOST_USER")
+
+CSRF_TRUSTED_ORIGINS = ['https://ads-online.ml',]
+CSRF_COOKIE_SECURE = True
