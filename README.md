@@ -1,4 +1,4 @@
-# ADS-ONLINE
+# AD-ONLINE
 
 ### Try it once, enjoy it further
 ### Django based bulletin board
