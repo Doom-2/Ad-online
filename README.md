@@ -2,7 +2,7 @@
 
 ### Try it once, enjoy it further
 ### Django based bulletin board
-[ads-online.ml](http://ads-online.ml)
+[ad-online.ru](https://ad-online.ru)
 
 Features:
 1. User authentication and authorization
